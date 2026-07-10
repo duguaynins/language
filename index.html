@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="auto">
+<head>
+<meta charset="UTF-8">
+<title>nins/language</title>
+
+<style>
+    body {
+        height: 100vh;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-family: Arial, sans-serif;
+        font-size: 48px;
+    }
+
+    #language {
+        text-align: center;
+        opacity: 0;
+        animation: fadeIn 2s ease forwards;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+</style>
+
+</head>
+
+<body>
+
+<div id="language"></div>
+
+<script>
+    const lang = navigator.language;
+
+    document.getElementById("language").textContent = lang;
+</script>
+
+</body>
+</html>
