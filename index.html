@@ -41,9 +41,11 @@
     const lang = navigator.language;
     document.getElementById("language").textContent = lang;
 
-    const q = encodeURIComponent(`tell me in ${lang}.`);
-    const url = `https://www.google.com/search?udm=50&q=${q}`;
-    window.open(url, "_blank", "noopener,noreferrer");
+    document.addEventListener("click", (event) => { ///console.log("Clicked:", event.target); 
+        const q = encodeURIComponent(`tell me in ${lang}.`);
+        const url = `https://www.google.com/search?udm=50&q=${q}`;
+        window.open(url, "_blank", "noopener,noreferrer");
+    },{ once: true });
 </script>
 
 </body>
